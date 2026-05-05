@@ -4,7 +4,7 @@ public abstract class ShipmentOrder implements  SummaryPrintable{
 
     private String orderNumber; // - unique shipment order number,
     private String customerName; // - customer name,
-    private doubel distanceKm; // - delivery distance in kilometers,
+    private double distanceKm; // - delivery distance in kilometers,
     private double baseFee; // - base shipment fee,
     private boolean insured; // - information whether the shipment is insured,
     private double lastCalculatedPrice; // - last price calculated during processing.
