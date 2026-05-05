@@ -52,12 +52,32 @@ public abstract class ShipmentOrder implements  SummaryPrintable{
 //
 //The abstract class should contain these common methods:
 
-
-    processOrder()
-
 //private void validateOrder() - checks common fields, for example empty order number or non-positive distance,
+
+    private void validateOrder() {
+        if (orderNumber == null || orderNumber.isEmpty()) {
+            throw new IllegalArgumentException("Order number cannot be empty");
+        }
+        if (customerName == null || customerName.isEmpty()) {
+            throw new IllegalArgumentException("Customer name cannot be empty");
+        }
+        if (distanceKm <= 0) {
+            throw new IllegalArgumentException("Distance must be positive");
+        }
+    }
 //protected void validateSpecificRules() - a hook method with an empty default implementation,
+
+    protected void validateSpecificRules() {
+    }
 //private double applyInsurance(double price) - if insured is true, adds 7% to the current price,
+
+    private double applyInsurance(double price) {
+        if (insured) {
+            price *= 1.07;
+        }
+        return price;
+    }
+
 //protected double applyBusinessDiscount(double price) - a hook method that by default returns the same price,
 //private void printProcessingResult() - prints information after processing,
 //public String buildSummaryLine() - returns a readable line with order number, customer, type and last calculated price.
