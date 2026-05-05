@@ -11,7 +11,7 @@ public class Main {
 
         for (ShipmentOrder order : orders) {
             order.processOrder();
-            System.out.println(order.buildSummaryLine());
+            System.out.println(order.buildSummaryLine()); //
             System.out.println();
         }
     }

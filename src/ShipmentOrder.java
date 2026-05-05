@@ -79,12 +79,37 @@ public abstract class ShipmentOrder implements  SummaryPrintable{
     }
 
 //protected double applyBusinessDiscount(double price) - a hook method that by default returns the same price,
+
+    protected double applyBusinessDiscount(double price) {
+        return price; // Hook
+    }
+
 //private void printProcessingResult() - prints information after processing,
+
+    private void printProcessingResult() {
+        System.out.println("Processed order: " + orderNumber +
+                " | Type: " + getShipmentType() +
+                " | Final price: " + String.format("%.2f", lastCalculatedPrice));
+    }
+
 //public String buildSummaryLine() - returns a readable line with order number, customer, type and last calculated price.
+
+    @Override
+    public String buildSummaryLine() {
+        return orderNumber + " | " + customerName + " | " +
+                getShipmentType() + " | " +
+                String.format("%.2f PLN", lastCalculatedPrice);
+    }
+
+
 //The abstract class should contain these abstract methods:
 //
 //protected abstract double calculateBasePrice(),
 //protected abstract double calculateAdditionalFee(),
 //public abstract String getShipmentType().
+
+    protected abstract double calculateBasePrice();
+    protected abstract double calculateAdditionalFee();
+    public abstract String getShipmentType();
 
 }
