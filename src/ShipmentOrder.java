@@ -1,4 +1,4 @@
-public abstract class ShipmentOrder {
+public abstract class ShipmentOrder implements  SummaryPrintable{
 
     //2. Abstract Class
     //Create exactly one abstract class named ShipmentOrder. This class should implement SummaryPrintable.
