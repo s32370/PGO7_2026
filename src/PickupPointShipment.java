@@ -19,7 +19,7 @@ public PickupPointShipment(String orderNumber, String customerName,
 //getShipmentType() should return "Pickup point".
 
 @Override
-public String getShipmentType() {
+public String getShipmentType(){
     return "Pickup point";
 }
 
@@ -30,9 +30,6 @@ public String getShipmentType() {
     return "Pickup point";
 }
 
-//calculateAdditionalFee() should add a size fee: 5 PLN for "S",
-// 10 PLN for "M",
-// and 18 PLN for "L".
 
 @Override
 protected double calculateAdditionalFee() {
@@ -43,7 +40,7 @@ protected double calculateAdditionalFee() {
         case "M": fee += 10; break;
         case "L": fee += 18; break;
     }
-//If fragile is true, add 12 PLN to the additional fee.
+
 
     if (fragile) {
         fee += 12;
@@ -54,7 +51,8 @@ protected double calculateAdditionalFee() {
 
 
 //Override validateSpecificRules(). If locker size is not "S", "M", or "L", throw IllegalArgumentException.
-@Override
+
+    @Override
 protected void validateSpecificRules() {
     if (!lockerSize.equals("S") &&
             !lockerSize.equals("M") &&
