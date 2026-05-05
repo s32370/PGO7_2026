@@ -1,4 +1,4 @@
-public class InternationalShipment extends ShipmentOrder(){
+public class InternationalShipment extends ShipmentOrder {
 
 
 private String destinationCountry; //- destination country,

@@ -1,4 +1,4 @@
-public class PickupPointShipment extends ShipmentOrder(){
+public class PickupPointShipment extends ShipmentOrder{
 
 private String lockerSize;
 private boolean fragile;

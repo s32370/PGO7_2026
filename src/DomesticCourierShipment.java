@@ -9,9 +9,7 @@ public class DomesticCourierShipment extends ShipmentOrder{
 //packageWeightKg - package weight in kilograms,
 //weekendDelivery - whether the package is delivered during the weekend.
 
-public DomesticCourierShipment(String orderNumber, String customerName, double distanceKm,
-                               double baseFee, boolean insured,
-                               double packageWeightKg, boolean weekendDelivery){
+public DomesticCourierShipment(String orderNumber, String customerName, double distanceKm, double baseFee, boolean insured, double packageWeightKg, boolean weekendDelivery){
     super(orderNumber, customerName, distanceKm, baseFee, insured);
     this.packageWeightKg=PackageWeightKg;
     this.weekendDelivery=weekendDelivery;
@@ -52,6 +50,9 @@ public DomesticCourierShipment(String orderNumber, String customerName, double d
         return price;
     }
 
+}
+
+void main() {
 }
 
 //Business rules:
