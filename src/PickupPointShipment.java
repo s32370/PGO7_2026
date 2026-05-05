@@ -1,4 +1,4 @@
-//reate class PickupPointShipment extending ShipmentOrder.
+public class PickupPointShipment extendins ShipmentOrder()
 //
 //Additional fields:
 //

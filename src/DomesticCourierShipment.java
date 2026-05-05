@@ -1,4 +1,4 @@
-public class DomesticCourierShipment extending ShipmentOrder{
+public class DomesticCourierShipment extends ShipmentOrder{
 
             private double packageWeightKg;
             private boolean weekendDelivery;
